@@ -6,9 +6,9 @@ import HeaderButton from "./HeaderButton";
 
 const Header = props => {
     return <Fragment>
-        <header className={classes.header}>
+        <header className={classes.header} >
             <h1>ReactMeals</h1>
-            <HeaderButton></HeaderButton>
+            <HeaderButton onClicked={props.onShow}></HeaderButton>
         </header>
         <div className={classes['main-image']}>
             <img src={mealsImage} alt="A table full of  delecious food" />
