@@ -4,25 +4,25 @@ import MealItem from './MealItem/MealItem'
 
 const dummyMeal = [
     {
-        id: '1',
+        id: 'm1',
         name: 'Sushi',
         description: 'finest fish and veggies',
         price: '100'
     },
     {
-        id: '2',
+        id: 'm2',
         name: 'Schnitzel',
         description: 'A german speciality',
         price: '200'
     },
     {
-        id: '3',
+        id: 'm3',
         name: 'Barbique Burger',
         description: 'Ameriacn,raw,meaty',
         price: '150'
     },
     {
-        id: '4',
+        id: 'm4',
         name: 'Green Bowl',
         description: 'Healthy.. and green',
         price: '250'
@@ -31,7 +31,14 @@ const dummyMeal = [
 
 
 const AvailableMeal = () => {
-    const mealList = dummyMeal.map(meal => <MealItem meal={meal}/>)
+    const mealList = dummyMeal.map((meal) => (
+        <MealItem 
+            key={meal.id}
+            id={meal.id}
+            name={meal.name}
+            description={meal.description}
+            price={meal.price}
+        />))
 
     return <section className={classes.meals}>
         <Card>
